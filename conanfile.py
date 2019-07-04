@@ -31,10 +31,11 @@ class DemoConan(ConanFile):
     def requirements(self):
         versions = tools.load('deps.cmake')
 
-        deps1_v = '0.0.1' # will be replaced by parsed values from deps.cmake
-        deps2_v = '0.0.1' # will be replaced by parsed values from deps.cmake
-        self.requires('deps1/{}@me/testing'.format(deps1_v))
-        self.requires('deps2/{}@me/testing'.format(deps2_v))
+        # just a dummy parser
+        zlib_v = versions.split(' ')[2]
+        print('parsed zlib version: {}'.format(zlib_v) )
+
+        self.requires('zlib/{}@conan/stable'.format(zlib_v))
 
     def build(self):
         print("build")

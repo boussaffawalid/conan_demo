@@ -1,2 +1,3 @@
-set(DEPS1_VERSION 1.0.0)
-set(DEPS2_VERSION 2.0.0)
+set( ZLIB_VERSION 1.2.11 )
+
+text.split()

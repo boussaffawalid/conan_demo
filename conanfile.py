@@ -17,6 +17,11 @@ def parse_version_from_cmake():
 
 
 class DemoConan(ConanFile):
+    scm = {
+        'type': 'git',
+        'url': 'https://github.com/boussaffawalid/conan_demo.git',
+        'revision': 'auto'
+    }
     name = 'demo'
     branch = 'develop'
     version = parse_version_from_cmake()
